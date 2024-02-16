@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio 3</title>
+  </head>
+
+  <body>
+    <div>
+      <div>
+        <h2>Resultado: <span class="resultado"></span></h2>
+        <div>
+          <div>
+            <div>
+              <label for="">Valor 1</label>
+              <input id="valor1" type="text" />
+            </div>
+            <div>
+              <label for="">Valor 2</label>
+              <input id="valor2" type="text" />
+            </div>
+            <div style="display: flex">
+              <button id="btn-sumar" type="button">Sumar</button>
+              <button id="btn-restar" type="button">Restar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Seleccionando elementos del DOM
+        const valor1Input = document.getElementById("valor1");
+        const valor2Input = document.getElementById("valor2");
+        const resultadoSpan = document.querySelector(".resultado");
+        const btnSumar = document.getElementById("btn-sumar");
+        const btnRestar = document.getElementById("btn-restar");
+
+        // Función para sumar dos números
+        function sumar() {
+          // Obteniendo los valores de los campos de entrada y convirtiéndolos a números
+          const valor1 = parseFloat(valor1Input.value) || 0;
+          const valor2 = parseFloat(valor2Input.value) || 0;
+          // Realizando la suma
+          const suma = valor1 + valor2;
+          // Mostrando el resultado en el elemento span
+          resultadoSpan.textContent = suma;
+        }
+
+        // Función para restar dos números
+        function restar() {
+          // Obteniendo los valores de los campos de entrada y convirtiéndolos a números
+          const valor1 = parseFloat(valor1Input.value) || 0;
+          const valor2 = parseFloat(valor2Input.value) || 0;
+          // Realizando la resta, si el resultado es negativo se muestra 0
+          const resta = valor1 - valor2 >= 0 ? valor1 - valor2 : 0;
+          // Mostrando el resultado en el elemento span
+          resultadoSpan.textContent = resta;
+        }
+
+        // Agregando event listeners a los botones
+        btnSumar.addEventListener("click", sumar);
+        btnRestar.addEventListener("click", restar);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio 1</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+    <div>
+        <div class="container">
+            <h2>Escríbenos !!!</h2>
+            <!-- Espacio para mostrar el resultado del formulario -->
+            <div class="resultado"></div>
+            <!-- Formulario de contacto -->
+            <form id="formulario">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input id="nombre" type="text" />
+                    <!-- Espacio para mostrar mensajes de error para el nombre -->
+                    <p class="errorNombre"></p>
+                </div>
+                <div class="form-group">
+                    <label for="asunto">Asunto</label>
+                    <input id="asunto" type="text" />
+                    <!-- Espacio para mostrar mensajes de error para el asunto -->
+                    <p class="errorAsunto"></p>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje"></textarea>
+                    <!-- Espacio para mostrar mensajes de error para el mensaje -->
+                    <p class="errorMensaje"></p>
+                </div>
+                <div>
+                    <button id="botton" type="submit">Enviar mensaje</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="../assets/js/scriptrx.js"></script>
+</body>
+</html>
